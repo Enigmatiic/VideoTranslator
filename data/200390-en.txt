@@ -1,0 +1,52 @@
+Welcome to Essential Concepts of Redux.
+After watching this video, you will be able to:
+Explain essential concepts of Redux. And describe Actions, Store, and Reducers.
+Let’s learn what is the basic principle behind the working of Redux.
+Redux offers a centralized state management system in your application library.
+The state of  your application is managed by a single store and not by individual components.
+A component's properties should be considered immutable.
+With Redux, when a user interacts with a component in an application, the Action updates
+the entire application’s state. This, in turn, triggers a re-render of the component, thereby
+updating that component's properties. These properties display the result to the user.
+The Redux elements that are involved in updating the component properties are:
+Actions, that are what your app can do. Store, that is the singular location and
+authoritative source of the app state, and Reducers, that are actions
+which return the new state. So, when an event is fired from any view by
+selecting a radio button, clicking a checkbox, or clicking a button it is called an action.
+Actions are JSON objects that contain information about changes that need to be made to the state.
+Actions are produced by functions called Action creators. It is a pure object created
+to store the information of the user’s event, and it describes a state change.
+It contains type of Action, time of occurrence, and which states it aims to change.
+Now, actions can be dispatched by various parts of your application, and they are received by the store.
+They are payloads of information that send data from application to store.
+They are plain JavaScript objects that describe WHAT happened, but do not
+describe HOW the app state will change. Actions are sent to your store instance
+whenever you want to update the state of your application. The rest is handled by the Reducers.
+Redux requires all Action objects to contain a type field. This field is used to describe
+what kind of Action is dispatched and is a constant that you export from a file.
+All other fields in the Action object are optional. The current Redux application state lives in
+an object that is called the store. There is a single Store per Redux application.
+It is an object, not a class, and besides your application’s state,
+it contains functions and other objects. In addition, a Store can dispatch and receive actions.
+However, the Store does not perform any changes to the application state,
+which is done by the Reducers.
+You can subscribe to listen to events whenever the Store updates.
+In a non-React app, you might use this subscription to update the UI.
+The application state in Redux is in the form of a JavaScript Object and is often referred to as the ‘state tree’.
+The Store holds the entire application list in the form of the ‘state tree’.
+You can add any values to the ‘state tree’ in the Store, and you can nest them as required.
+Whenever you dispatch an Action to your store, the action is passed to the Reducer.
+The reducer then makes the appropriate changes to the state.
+Reducers are pure functions that receive the current state and an Action object and
+return a new state with the actions performed. In other words, they are used to recalculate the new
+application state or at least, a part of it. It acts as an event listener which handles
+events based on the accepted event type. It reads the payloads from the Action and then
+updates the Store via the state accordingly. The Reducer function takes two parameters;
+the previous app state and the Action being dispatched. It returns the new app state.
+In this video, you learned that: The Redux elements that are involved
+in updating of the component properties are: Actions, Store, and Reducers.
+Actions are JSON objects that contain information about changes that need to be made to the state.
+The current Redux application state lives in an object that is called the Store.
+Reducers are pure functions that receive the current state and
+an Action object and return a new state with the actions performed.
+And you can subscribe to listen to events whenever the Store updates.

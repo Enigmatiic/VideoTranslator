@@ -1,0 +1,208 @@
+0
+00:00:06,870 --> 00:00:09,766
+Welcome to Essential Concepts of Redux.
+
+1
+00:00:09,953 --> 00:00:12,994
+After watching this video, you will be able to:
+
+2
+00:00:13,063 --> 00:00:18,787
+Explain essential concepts of Redux. And describe Actions, Store, and Reducers.
+
+3
+00:00:19,353 --> 00:00:23,520
+Let’s learn what is the basic principle behind the working of Redux.
+
+4
+00:00:23,520 --> 00:00:29,199
+Redux offers a centralized state management system in your application library.
+
+5
+00:00:29,199 --> 00:00:35,420
+The state of  your application is managed by a single store and not by individual components.
+
+6
+00:00:35,420 --> 00:00:38,820
+A component's properties should be considered immutable.
+
+7
+00:00:38,820 --> 00:00:44,633
+With Redux, when a user interacts with a component in an application, the Action updates
+
+8
+00:00:44,633 --> 00:00:51,120
+the entire application’s state. This, in turn, triggers a re-render of the component, thereby
+
+9
+00:00:51,120 --> 00:00:57,120
+updating that component's properties. These properties display the result to the user.
+
+10
+00:00:57,780 --> 00:01:02,520
+The Redux elements that are involved in updating the component properties are:
+
+11
+00:01:02,520 --> 00:01:07,980
+Actions, that are what your app can do. Store, that is the singular location and
+
+12
+00:01:07,980 --> 00:01:12,860
+authoritative source of the app state, and Reducers, that are actions
+
+13
+00:01:12,860 --> 00:01:18,233
+which return the new state. So, when an event is fired from any view by
+
+14
+00:01:18,233 --> 00:01:24,153
+selecting a radio button, clicking a checkbox, or clicking a button it is called an action.
+
+15
+00:01:24,720 --> 00:01:31,380
+Actions are JSON objects that contain information about changes that need to be made to the state.
+
+16
+00:01:31,380 --> 00:01:38,027
+Actions are produced by functions called Action creators. It is a pure object created
+
+17
+00:01:38,027 --> 00:01:43,594
+to store the information of the user’s event, and it describes a state change.
+
+18
+00:01:43,594 --> 00:01:49,380
+It contains type of Action, time of occurrence, and which states it aims to change.
+
+19
+00:01:50,093 --> 00:01:56,774
+Now, actions can be dispatched by various parts of your application, and they are received by the store.
+
+20
+00:01:56,774 --> 00:02:01,740
+They are payloads of information that send data from application to store.
+
+21
+00:02:02,127 --> 00:02:06,674
+They are plain JavaScript objects that describe WHAT happened, but do not
+
+22
+00:02:06,674 --> 00:02:12,107
+describe HOW the app state will change. Actions are sent to your store instance
+
+23
+00:02:12,107 --> 00:02:18,000
+whenever you want to update the state of your application. The rest is handled by the Reducers.
+
+24
+00:02:18,660 --> 00:02:25,060
+Redux requires all Action objects to contain a type field. This field is used to describe
+
+25
+00:02:25,060 --> 00:02:30,526
+what kind of Action is dispatched and is a constant that you export from a file.
+
+26
+00:02:30,526 --> 00:02:37,413
+All other fields in the Action object are optional. The current Redux application state lives in
+
+27
+00:02:37,413 --> 00:02:42,900
+an object that is called the store. There is a single Store per Redux application.
+
+28
+00:02:42,900 --> 00:02:47,520
+It is an object, not a class, and besides your application’s state,
+
+29
+00:02:47,520 --> 00:02:54,921
+it contains functions and other objects. In addition, a Store can dispatch and receive actions.
+
+30
+00:02:54,921 --> 00:02:59,587
+However, the Store does not perform any changes to the application state,
+
+31
+00:02:59,587 --> 00:03:02,418
+which is done by the Reducers.
+
+32
+00:03:02,418 --> 00:03:06,926
+You can subscribe to listen to events whenever the Store updates.
+
+33
+00:03:06,926 --> 00:03:11,640
+In a non-React app, you might use this subscription to update the UI.
+
+34
+00:03:11,640 --> 00:03:19,975
+The application state in Redux is in the form of a JavaScript Object and is often referred to as the ‘state tree’.
+
+35
+00:03:19,975 --> 00:03:24,840
+The Store holds the entire application list in the form of the ‘state tree’.
+
+36
+00:03:24,840 --> 00:03:30,720
+You can add any values to the ‘state tree’ in the Store, and you can nest them as required.
+
+37
+00:03:31,260 --> 00:03:36,840
+Whenever you dispatch an Action to your store, the action is passed to the Reducer.
+
+38
+00:03:36,840 --> 00:03:40,787
+The reducer then makes the appropriate changes to the state.
+
+39
+00:03:40,787 --> 00:03:46,480
+Reducers are pure functions that receive the current state and an Action object and
+
+40
+00:03:46,480 --> 00:03:52,973
+return a new state with the actions performed. In other words, they are used to recalculate the new
+
+41
+00:03:52,973 --> 00:03:59,060
+application state or at least, a part of it. It acts as an event listener which handles
+
+42
+00:03:59,060 --> 00:04:05,160
+events based on the accepted event type. It reads the payloads from the Action and then
+
+43
+00:04:05,160 --> 00:04:11,160
+updates the Store via the state accordingly. The Reducer function takes two parameters;
+
+44
+00:04:11,160 --> 00:04:17,160
+the previous app state and the Action being dispatched. It returns the new app state.
+
+45
+00:04:18,300 --> 00:04:22,727
+In this video, you learned that: The Redux elements that are involved
+
+46
+00:04:22,727 --> 00:04:27,767
+in updating of the component properties are: Actions, Store, and Reducers.
+
+47
+00:04:27,767 --> 00:04:34,587
+Actions are JSON objects that contain information about changes that need to be made to the state.
+
+48
+00:04:34,587 --> 00:04:39,780
+The current Redux application state lives in an object that is called the Store.
+
+49
+00:04:39,780 --> 00:04:44,460
+Reducers are pure functions that receive the current state and
+
+50
+00:04:44,460 --> 00:04:48,540
+an Action object and return a new state with the actions performed.
+
+51
+00:04:49,020 --> 00:04:53,580
+And you can subscribe to listen to events whenever the Store updates.
+
